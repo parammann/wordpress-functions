@@ -1,0 +1,27 @@
+<?php
+					$args = array(
+						'post_parent' => 66,
+						'post_type' => 'page',
+						'orderby' => 'menu_order'
+					);
+				$child_query = new WP_Query( $args );
+				?>
+				<ul class="service_list">
+				<?php
+				while ( $child_query->have_posts() ) : $child_query->the_post();
+				?>
+				<li>
+                    <a href="<?php the_permalink(); ?>"><span class="img">
+						<?php if (class_exists('MultiPostThumbnails')) :
+							MultiPostThumbnails::the_post_thumbnail(
+							get_post_type(),'secondary-image',$post_id);endif;
+						?>
+					</span></a>
+					<a href="<?php the_permalink(); ?>"><h3><?php echo the_title();?></h3></a>
+				</li>
+				<?php
+				 endwhile;
+				 
+				 wp_reset_postdata();
+				?>
+</ul>

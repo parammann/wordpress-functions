@@ -1,0 +1,15 @@
+<?php
+					$args = array(
+						'post_parent' => 151,
+						'post_type' => 'page',
+						'orderby' => 'menu_order'
+					);
+				$child_query = new WP_Query( $args );
+				
+				while ( $child_query->have_posts() ) : $child_query->the_post();
+				
+				 the_content(); 
+				 
+					 endwhile; 
+					 wp_reset_postdata();
+?>

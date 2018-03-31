@@ -1,0 +1,20 @@
+1) for adding a featured image
+	functions.php
+	
+			add_theme_support( 'post-thumbnails' );
+			
+			
+2) for adding a image in page
+	file.php
+		
+			<?php the_post_thumbnail(); ?>
+			
+3) set the image size
+	function.php
+	
+			add_image_size( 'single-post-thumbnail', 590, 180 );
+			
+4) for adding a image of particular size
+	file.php
+	
+			<?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
