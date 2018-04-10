@@ -1,4 +1,4 @@
-		MAKING OF ADMIN PAGE BUTTONS
+ 		MAKING OF ADMIN PAGE BUTTONS
 1) add_menu_page();
 2) add_submenu_page();
 
@@ -9,7 +9,7 @@ admin_menu
 1)register_setting():					database making
 2)setting_field(): in page				registering above in page
 3)add_setting_section:					setting section for form
-4)do_setting_section: in page			setting section in page
+4)do_setting_section: in page				setting section in page
 5)add_settings_field:					setting of field for the page
 6)submit_button: in page				adding of submit button on page
 7)get_option:							is used to get an input
@@ -30,3 +30,11 @@ admin_menu
 hook
 admin_enqueue_scripts
 
+
+		FOR MEDIA UPLOADER
+1)make jquery file
+2)add js in file
+3)wp_register_script
+4)wp_enqueue_script
+5)wp_enqueue_media: in enqueue page			for adding of mediauploader
+6)
